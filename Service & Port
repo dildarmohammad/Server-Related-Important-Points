@@ -17,3 +17,5 @@ HTTPS                    443
 SMTP                     587
 
 FTP                      21
+
+Localhost                8080
