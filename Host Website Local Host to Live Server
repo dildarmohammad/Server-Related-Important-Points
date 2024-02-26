@@ -1,0 +1,17 @@
+<!--Host Website Local Host to Live Server-->
+
+Step1: Export your localhost database
+
+Step2: Make .zip folder your website files (project)
+
+Step3: Open your cPanel and create database (with user previlage)
+
+Step4: Go to phpmyadmin and Import database and update wp_option table with live website link
+
+Step5: Go to File managaer public_html and Import your website files
+
+Step6: Update Database configuration (Database Name, User & Password) in wp_config.php file
+
+Step7: Your Website Live Done!
+
+Just go to Dashboard and set your Permalinks by (Settings > Permalinks > Post name)
