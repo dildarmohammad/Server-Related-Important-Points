@@ -1,6 +1,27 @@
-Redirect All Web Traffic
-If you have existing code in your .htaccess, add the following:
+# Redirect All Web Traffic to https
 
+# There are Two method for redirect http to https
+
+# Method 1:
+
+# Redirect http to https
 RewriteEngine On
 RewriteCond %{SERVER_PORT} 80
 RewriteRule ^(.*)$ https://www.yourdomain.com/$1 [R,L]
+
+
+# Method 2:
+
+# Redirect http to https
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteCond %{HTTPS} !=on
+RewriteRule ^.*$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
+ 
+# BEGIN WordPress
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
