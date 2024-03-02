@@ -25,3 +25,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 </IfModule>
+
+# Method 3: (Only for HTML Website)
+
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.(.*)
+RewriteRule ^.*$ https://%1/$1 [R=301,L]
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
