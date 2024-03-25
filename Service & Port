@@ -10,6 +10,8 @@ WHM SSL	                 2087
 	
 Webmail SSL	         2096
 
+SSH                      22
+
 HTTP                     80
 
 HTTPS                    443
