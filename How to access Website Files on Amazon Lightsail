@@ -1,0 +1,21 @@
+<!-- How to access Website Files on Amazon Lightsail-- >
+
+Step1: First of all download your .Pem file from AWS Server.
+
+Step2: Connect SSH via PuTTY
+a. Convert .Pem file to .PPK through Puttygen software
+b. Go to Putty ->SSH->Auth->Browse .PPK file
+c. Set Tunnel 
+Source Port-> 8888
+Destination-> localhost:80
+d. Connection->Data->Auto login user name: bitnami
+e. Session: Open
+
+Step3: Open your Filezilla Software 
+a. Select protocol: SFTP
+b. Host: IP address
+c. Log Type: Key File
+d. User: bitnami
+e. select your aws server key file (.Pem file)
+
+Step4: Successfully Done!
